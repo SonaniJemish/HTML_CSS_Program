@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 7</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            background-color: black;
+        }
+        .navbar li{
+            float: left;
+            list-style: none;
+            margin: 12px 25px;            
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li a{
+            padding: 4px 4px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover  {
+            color: pink;
+        }
+        .navbar input{
+            padding: 3px 17px;
+            border-radius: 30px;
+            width: 130px;
+        }
+        #background{
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            position:absolute;
+            z-index: -1;
+            opacity: 0.70;
+        }
+        .containt{
+            display: flex;
+            justify-content: center ;
+        }
+        .itemimg{
+            width: 300px;
+            height: 300px;
+            border: 1px solid yellow;
+            margin: 1rem;background-color: aliceblue;
+            padding:2rem 2rem 4rem 2rem;
+        }
+        footer{
+            background-color: black;
+            color: aliceblue ;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 0.5rem;
+        }
+        .footer{
+            text-decoration: none;
+            color: white;
+            padding: 5rem 5rem 0rem 5rem;
+        }
+        h3{
+            margin: 0.5rem 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="background" src="img/nature1.jpg">
+        <div class="header">
+            <nav class="navbar">
+                <ul>
+                    <li> <a href="#headertext">Home</a> </li>
+                    <li> <a href="#ptag">About</a> </li>
+                    <li> <a href="#lorem">Services</a> </li>
+                    <li> <a href="#">Contact Us</a> </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="containt">  
+            <div class="items">
+                <img class="itemimg" src="img/item1.jpg">
+            </div>
+            <div class="items">
+                <img class="itemimg" src="img/item2.jpg">
+            </div>
+            <div class="items">
+                <img class="itemimg" src="img/item3.jpg">
+            </div>
+        </div>
+        <footer>
+            <h3>Contact : 8238933359</h3>
+            <h3>Follow on :</h3>
+            <a href="https://www.instagram.com" class="footer">Instagram</a>
+            <a href="https://www.Facebook.com" class="footer">Facebook</a>
+            <a href="https://www.google.com" class="footer">Google</a>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 6</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            color: aliceblue;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header{
+            width: 100%;
+        }
+        footer{
+            width: 100%;
+            font-size: 1.2rem;
+            background-color: black;
+            opacity: 0.5;
+            text-align: center;
+            color: white;
+            font-weight: bolder;
+        }
+        .menu{
+            padding: 1.3rem;
+            margin: 0.7rem;
+            font-size: x-large;
+            font-weight: bolder;
+        }
+        td{
+            padding:2rem 10rem;
+        }
+        ul{
+            list-style-type:circle;
+        }
+        body{
+            background-color: rgb(39, 39, 39);
+        }
+        img{
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            position:absolute;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        h1{
+            font-size: 3rem;
+            background-color: black;
+            opacity: 0.5;
+            text-align: center;
+            color: white;
+            font-weight: bolder;
+        }
+        h3{
+            color: rgb(255, 45, 45);
+            font-size: xx-large;
+            margin-bottom: 0.5rem;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/hotel2.jpg" >
+    <div class="container">
+        <div class="header">
+            <h1>SJ Food</h1>
+        </div>
+        <div class="menu">
+            <table>
+                <tr>
+                    <td>
+                        <h3>South Indian Food</h3>
+                            <ol>
+                                <li>Simple Dhosa</li>
+                                <li>Uttapam</li>
+                                <li>Idli</li>
+                                <li>Medu Vada</li>
+                                <li>Dal</li>
+                                <li>Masala Dhosa</li>
+                               </ol>
+                    </td>
+                    <td>
+                        <h3>Prize</h3>
+                        <ul class="prize">
+                            <li>20</li>
+                            <li>30</li>
+                            <li>40</li>
+                            <li>40</li>
+                            <li>20</li>
+                            <li>35</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Gujarati Food</h3>
+                            <ol>
+                                <li>Full Gujarati Thali</li>
+                                <li>Butter Milk</li>
+                                <li>Papad</li>
+                                <li>Sev-Tomato Sabji</li>
+                                <li>Roti</li>
+                                <li>Butter Roti</li>
+                            </ol>
+                    </td>
+                    <td>
+                        <h3>Prize</h3>
+                        <ul class="prize">
+                            <li>120</li>
+                            <li>30</li>
+                            <li>40</li>
+                            <li>40</li>
+                            <li>20</li>
+                            <li>35</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <footer>
+            <h4>Address  :  SJ Food, Near Maharajafarm, Motavarachha, Surat</h4>
+            <h4>Contact No : 8238933359</h4>
+        </footer>
+    </div>
+</body>
+</html>

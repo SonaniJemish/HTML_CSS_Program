@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        *{
+            margin: 0;
+            font-size: 19px;
+            padding: 0;
+        }
+        .container{
+            background-image: url(img/study1.jpg);
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            position:absolute;
+            z-index: -1;
+            opacity: 0.70;
+        }
+        #outtable{
+            margin-top: 4%;
+            margin-left: 5%;
+        }
+        label{
+            margin:55px 20px;
+            font-size: 19px;
+            font-weight: bolder;
+            color: black;   
+        }
+        h1{
+            text-align: center;
+            font-size: 60px;
+        }
+        .button{
+            padding: 5px 35px;
+            border: 1px solid rgb(0, 247, 255);
+            border-radius: 5px;
+            background-color:rgb(60, 60, 60);
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+        <h1>Student Rregistration Form</h1>
+        <div class="form">
+            <table id="outtable" cellspacing="5px">
+                <tr>
+                    <td><label for="FName">First Name :</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="LName">Last Name :</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="DOB">Date Of Birth :</label></td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td><label for="Email">Email Id :</label></td>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="Contact">Mobile No :</label></td>
+                    <td><input type="tel"></td>
+                </tr>
+                <tr>
+                    <td><label for="Gender">Gender :</label></td>
+                    <td><input type="radio" value="male">Male <input type="radio" value="Female">Female</td>
+                </tr>
+                <tr>
+                    <td><label for="Hobby">Hobby :</label></td>
+                    <td><input type="checkbox" value="Coading">Coading
+                        <input type="checkbox" value="Browsing">Browsing
+                        <input type="checkbox" value="Reading">Reading
+                        <input type="checkbox" value="Other">Other
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="Country">Country :</label></td>
+                    <td><select>
+                        <option value="India">India</option>
+                        <option value="America">America</option>
+                        <option value="Canada">Canada</option>
+                        <option value="U.K.">U.K.</option>
+                        <option value="Australia">Australia</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="City">City :</label></td>
+                    <td><select>
+                        <option value="Surat">Surat</option>
+                        <option value="Gandhinagar">Gandhinagar</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Vadodra">Vadodra</option>
+                        <option value="Bhavanagar">Bhavanagar</option>
+                        <option value="Junagadh">Junagadh</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="Add">Address :</label></td>
+                    <td><textarea cols="50" rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="Study">Qualificationn :</label></td>
+                    <td>
+                        <table id="intable">
+                            <tr>
+                                <th>Si.No.</th>
+                                <th>Examination</th>
+                                <th>Persantage</th>
+                                <th>Year Of Passing</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Class 10</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Class 12</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Graduation</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><input type="submit" class="button" value="Submit" style="margin: 20px;"></td>
+                    <td><input type="reset" class="button" value="Reset"></td>
+                </tr>
+            </table>
+        </div>
+</body>
+</html>

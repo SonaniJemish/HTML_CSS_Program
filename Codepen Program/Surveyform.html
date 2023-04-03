@@ -1,0 +1,128 @@
+<html>
+  <head>
+<title>Survey Form</title>
+<style>
+    body{
+  background-image: url(https://www.desktopbackground.org/p/2014/01/16/702356_wallpapers-hd-samsung_1920x1080_h.png);
+  background-size: 100%;
+}
+form{
+  margin: 0 25% 0 25%;
+}
+fieldset{
+  background-color: rgba(225,225,225,0.7);
+  border:solid white;
+  border-radius: 6px;
+  color:black;
+  box-shadow:7px 3px 20px lightgray;
+}
+lable{
+  font-size:20px;
+}
+#extra{
+  color: lightgray;
+  font-size: 17px;
+}
+h1{
+  text-align:center;
+}
+fieldset p{
+  font-size:30px
+}
+select{
+  width:100%;
+  border-radius:8px;
+  padding:7px;
+  border: none;
+}
+#discription input{
+  width: 98%;
+  padding: 7px;
+  border: none;
+  border-radius:5px;
+}
+#discription lable{
+  font-size:25px;
+}
+#radio input{
+  height:18px;
+  width:18px;
+  margin: 15px;
+}
+#checkbox input{
+  height:15px;
+  width:15px;
+  margin:0 10px 0 5px;
+}
+textarea{
+  width:90%;
+  padding:30px 10px;
+}
+button{
+  background-color: blue;
+  border-radius:5px;
+  border: green;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  width:100%;
+}
+</style>
+  </head>
+  <body>
+    <div id="extra">
+      <h1>Welcome to SAMSUNG</h1>
+      <p>Hello Friends,</p>
+      <p>We hope that you will be happy with our products so you can give your feedback so that we can do better for our customers.<br>
+  Visit Again ... </p>
+    </div>
+    <form id="survey-form">
+      <fieldset>
+          <h1 id="title">Feedback Form</h1>
+      <div id="discription">
+      <lable id="name-lable">Name :</lable><br>
+      <input id="name" type="text" placeholder="Enter Name" required><br><br>
+      <lable id="email-lable">Email :</lable><br>
+      <input id="email" type="email" placeholder="abc@gmail.com" required><br><br>
+      <lable id="number-lable">Age :</lable><br>
+      <input id="number" type="number" placeholder="Age" min="20" max="89" required>
+        </div><br>
+        <div id="dropdowndiv">
+        <p>Select the item you have purchased :</p>
+        <select id="dropdown" reqired>
+          <option disabled selected Value>Select Your Product</option>
+          <option value="Mobile">Mobile</option>
+          <option value="Watch">Watch</option>
+          <option value="Washing Machine">Washing Machine</option>
+          <option value="Frege">Frege</option>
+          <option value="T.V">T.V</option>
+          <option value="Other Accessories">Accessories</option>
+        </select>
+        </div>
+        <br>
+        <div id="radio">
+        <p>Tell us about our service :</p>
+        <lable><input type="radio" name="emotion" value="bad">Bad</lable>
+        <lable><input type="radio" name="emotion" value="Not Bad">Not Bad</lable>
+        <lable><input type="radio" name="emotion" value="Good" checked>Good</lable>
+        <lable><input type="radio" name="emotion" value="Excellent">Excellent</lable>
+        </div>
+        <br>
+        <div id="checkbox">
+        <p>Can do for customer tell us :</p>
+        <lable><input type="checkbox" value="Improve service">Improve service</lable><br>
+          <lable><input type="checkbox" value="Expand Staff">Expand Staff</lable><br>
+          <lable><input type="checkbox" value="Improve Online Site">Improve Online Site</lable><br>
+          <lable><input type="checkbox" value="Impliment On Better Conversation">Impliment On Better Conversation</lable><br>
+          <lable><input type="checkbox" value="Improve Home Services">Improve Home Services</lable><br>
+        </div>
+        <br>
+        <div id="textarea">
+        <p>Enter Other Suggestions Or Feedback :</p>
+        <textarea placeholder="Enter Here ..."></textarea>
+        </div><br><br>
+      <button id="submit">Submit</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

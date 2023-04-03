@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      #nav-bar {
+        /* background-color: black; */
+        border-bottom: 2px solid black;
+        position: relative;
+      }
+      #nav-bar li {
+        float: right;
+        margin: 27px 5px;
+        list-style: none;
+      }
+      #nav-bar ul {
+        overflow: auto;
+      }
+      #nav-bar li a {
+        color: black;
+        text-decoration: none;
+        padding: 5px 20px;
+        font-size: x-large;
+        font-family: "Signika Negative", sans-serif;
+        font-weight: bold;
+      }
+      #header-img {
+        width: auto;
+      }
+      img {
+        width: 225px;
+        margin: 15px 0px;
+      }
+      iframe {
+        width: 720px;
+        height: 470px;
+      }
+      .iframe-video {
+        width: 720px;
+        margin: 20px auto;
+      }
+      .form {
+        width: 300px;
+        margin: 30px auto;
+      }
+      form input {
+        margin: 10px auto;
+      }
+      .class1{
+        width:300px;
+        height: 450px;        
+        display:grid;
+        float: left;
+        margin: 8px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <nav id="nav-bar">
+        <ul>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#tablet">Tablet</a></li>
+          <li><a class="nav-link" href="#desktop">Desktop</a></li>
+          <li><a class="nav-link" href="#laptop">Laptop</a></li>
+          <div id="header-img">
+            <img
+              src="data:image/png;base64,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"
+              alt="Logo"
+            />
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <div class="iframe-video">
+      <iframe
+        src="https://www.youtube.com/embed/_4ni0iqu50s"
+        frameborder="0"
+        id="video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="form">
+      <form action="https://www.freecodecamp.com/email-submit" id="form">
+        <center>
+          <h3>Enter Your Email</h3>
+          <div class="email">
+            <input
+              type="email"
+              name="email"
+              id="email1"
+              placeholder="abc123@gmail.com"
+              required
+            />
+          </div>
+          <div>
+            <input class="submit" type="button" value="Submit" />
+          </div>
+        </center>
+      </form>
+    </div>
+    <div class="products">
+      <div id="laptop">
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/Yoga-9-SS-Hero-Evo.png?context=bWFzdGVyfHJvb3R8NzMxNjN8aW1hZ2UvcG5nfGg5Ny9oZGYvMTI1MTM5NjIxOTcwMjIucG5nfDE4OTUyYWUzZTc2MTJmYjc0ZTdmOTIyZWY0ZWM1OWQ1MTA1ZjJhYmZlOGY1ZmQzMmIzZGRlOGU0NGY2NTc5NDE"
+            alt="Lenovo Yoga 9i"
+            class="img1"
+          />
+          <h3>Lenovo Yoga 9i</h3>
+          <ul>
+            <li>11gen intel core</li>
+            <li>14inch display</li>
+            <li>2 in 1 Laptop</li>
+          </ul>
+          <lable>Price : 172490₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/lenovo-laptop-thinkbook-15p-gen-2-15-intel-subseries-gallery-1.png?context=bWFzdGVyfHJvb3R8Mjk5MTM2fGltYWdlL3BuZ3xoZTEvaDY1LzEyMTMwNjgxNTIwMTU4LnBuZ3xiZGEzOTIwNDZlNmVlOTU2MmY3MTlkNzg1YTcxZTc1ZDQwNWIyYTUyOTAwZmRmMGI4YTY5ZTdjMTViM2JiZjRi"
+            alt="Lenovo Thiink Book"
+            class="img1"
+          />
+          <h3>Lenovo Think book</h3>
+          <ul>
+            <li>Windows 11 enebled</li>
+            <li>Nvidia Graphic card</li>
+            <li>15.6 inch Display</li>
+          </ul>
+          <lable>Price : 107825₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/lenovo-laptop-thinkpad-x1-carbon-gen-9-14-subseries-hero.png?context=bWFzdGVyfHJvb3R8NjM3NDR8aW1hZ2UvcG5nfGg1Yy9oNDMvMTE2Mjg3NTE2MTgwNzgucG5nfDA1N2Y2ZjU4M2YwOGQ0OTFmMGI4Y2RlN2ZmYTQ4ZWJhZDljNTVlOTNkNTNjNmI2ZDM1ODNjODVmMGY5NGUyMTU"
+            alt="Think Pad X1"
+            class="img1"
+          />
+          <h3>Lenovo Thinkpad X1</h3>
+          <ul>
+            <li>AI-Bio matric security</li>
+            <li>intel evo certified processor</li>
+            <li>Enebled remote control collabration</li>
+          </ul>
+          <lable>Price : 158490₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+        <span class="class1">
+          <img
+            src="https://www.lenovo.com/medias/lenovo-thinkpad-v15-amd-gallery-9.png?context=bWFzdGVyfHJvb3R8MzExNTE2fGltYWdlL3BuZ3xoZDcvaDYyLzEwNzc2ODg4OTAxNjYyLnBuZ3xkZmY2M2VkMDAzOWNlN2JiOTg1MGMwOWEwMzc0YzhhMGUzYzQxMzRlOWM1YTBlOTE5ODUyMGViNmZjYjAxZTZm"
+            alt="Levono V15"
+            class="img1"
+          />
+          <h3>Lenovo V15</h3>
+          <ul>
+            <li>15.6 inch Amd Laptop</li>
+            <li>relible and productive</li>
+            <li>hdd and pcle storage option</li>
+          </ul>
+          <lable>Price : 42990₹</lable>
+          <button class="btn">Buy</button>
+        </span>
+        <span class="class1">
+          <img
+            src="https://www.lenovo.com/medias/IPG-3i-10.jpg?context=bWFzdGVyfHJvb3R8NTY0NjJ8aW1hZ2UvanBlZ3xoNWIvaDI3LzExNzIyMzc4MzQ2NTI2LmpwZ3xiODU5ZGM3NzBjMWViN2JiNDAxYjE3MzY2ZDM3ZTU1ZTUxZjgwNDZlZmMyZWRmOWIzNGJlZWZkNzI4ZDMzZGFm"
+            alt="Lenovo Ideapad 3i"
+            class="img1"
+          />
+          <h3>Lenovo Ideapad 3i</h3>
+          <ul>
+            <li>Intel Processor</li>
+            <li>Impressive and free visual</li>
+          </ul>
+          <lable>Price : 53990₹</lable>
+          <button class="btn">Buy</button>
+        </span>
+        <span class="class1">
+          <img
+            src="https://www.lenovo.com/medias/Legion-5-AMD-9.jpg?context=bWFzdGVyfGltYWdlc3w1MTYxOHxpbWFnZS9qcGVnfGltYWdlcy9oYWYvaDc0LzExOTc2MTE0MDQ0OTU4LmpwZ3w4MjUwOTgxOTgyNDM3ODM1ZTEyNmI1YzJmMjA1ZTllNzc5YjkxNTk3MGY5ZTJkM2NiOTVlNDJmMmM1NGI5MDgz"
+            alt="Lenovo Legion gen 6"
+            class="img1"
+          />
+          <h3>Lenovo Legion Gen6</h3>
+          <ul>
+            <li>Premium Series</li>
+            <li>Dollby Sound by harman</li>
+            <li>NVIDIA RTX Graphic card</li>
+          </ul>
+          <lable>Price : 108990₹</lable>
+          <button class="btn">Buy</button>
+        </span>
+      </div>
+
+      <div id="desktop">
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/1AIO3-22-white-002-.png?context=bWFzdGVyfHJvb3R8MTc0Mzc5fGltYWdlL3BuZ3xoZTQvaGIzLzExMTU1NTAxOTQwNzY2LnBuZ3w3YTg5YmZhMTg0MzNlZmVjMDQ3OTFmMzFjOGZjOTA3NTM4NzU3ZWU4ZjVkYTU1MTgyY2Y0OGM5ZDJkY2Y5Nzky"
+            alt="IdeaCentre AIO 3"
+            class="img1"
+          />
+          <h3>IdeaCentre AIO 3</h3>
+          <ul>
+            <li>Mouse & Keyboard Included</li>
+            <li>Slick performance meets stylish engineerin</li>
+          </ul>
+          <lable>Price : 38990₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/lenovo-ideacentre-a340-23-hero-1126.png?context=bWFzdGVyfHJvb3R8NzM4NjF8aW1hZ2UvcG5nfGg0Mi9oOTIvMTA2NzM0ODgzNjM1NTAucG5nfDg4MmUwNGUxMTE5NGRmYWQ5MjM3NWY2MDA5M2VmN2QzY2U2Njk3YzdlMzYwZTQzY2RkZDk5MmQ5ZGY0OTNlYjQ"
+            alt="Ideacentre A340"
+            class="img1"
+          />
+          <h3>Ideacentre A340</h3>
+          <ul>
+            <li>Product with 3 Years default onsite warranty</li>
+            <li>
+              All in all, this 60.45cms (23.8) all-in-one makes the ideal home
+              PC...
+            </li>
+          </ul>
+          <lable>Price : 44420₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/lenovo-laptop-thinkcentre-m75t-gen-2-hero.png?context=bWFzdGVyfHJvb3R8MTI2NzMzfGltYWdlL3BuZ3xoMzUvaDRkLzExMTM1MjY3MTEwOTQyLnBuZ3wwNTA1ZGQ0YTY4MjAyZjQzMzYxZjIxMTNiMTMyMGVhZTk1MGQwY2E3NTM3ODJiOTRiMTNkMTAxNDEyYzJlMmZl"
+            alt="ThinkCentre M75t Gen 2"
+            class="img1"
+          />
+          <h3>ThinkCentre M75t Gen 2</h3>
+          <ul>
+            <li>
+              Improve productivity and employee experience with the ThinkCentre
+              M75t Gen 2 desktop tower.
+            </li>
+            <li>
+              Its powerful AMD performance, manageability, expandability,
+              reliable design, and convenient features put people at the center
+              of business.
+            </li>
+          </ul>
+          <lable>Price : 36660₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/desktop-ideacentre-300serires-3-intel-hero.png?context=bWFzdGVyfHJvb3R8NzI0NDd8aW1hZ2UvcG5nfGhhYi9oMWYvMTA4MjU4NDMyMTIzMTgucG5nfDJhMTc4MjA1OTA1ZGI3ZTNlNjBlZThiOTY2YmI0NWY4NWU5ZDFlMGM1NzI4N2RjNzg0MzAyZWU4ZTE2Nzc1NmQ"
+            alt="IdeaCentre 3i"
+            class="img1"
+          />
+          <h3>IdeaCentre 3i</h3>
+          <ul>
+            <li>
+              The IdeaCentre 3i desktop is a compact tower designed in a sleek
+              Mineral Gray chassis that fits and looks great anywhere in your
+              home.
+            </li>
+            <li>It has the optimal performance</li>
+          </ul>
+          <lable>Price : 31990₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/lenovo-thinkcentre-m80q-subseries-hero.png?context=bWFzdGVyfHJvb3R8MTQzNzA3fGltYWdlL3BuZ3xoYTYvaDA1LzEwOTIxNzczNTYzOTM0LnBuZ3wwNWEzMjZmNGU3NjFhNmQ4ZDYwZDRjMzljZjMyMjUwN2Y2ZThmNGQzODNhOWQ4NzUwNmI3NzVkMTI1MmY5NGY0"
+            alt="ThinkCentre M80q Tiny"
+            class="img1"
+          />
+          <h3>ThinkCentre M80q Tiny</h3>
+          <ul>
+            <li>
+              The ThinkCentre M80q tiny desktop PC is a 1L powerhouse for the
+              enterprise.
+            </li>
+            <li>
+              It’s also configurable and secure, with optional Intel vPro®
+              technology that makes it easy to manage.
+            </li>
+          </ul>
+          <lable>Price : 31248₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/lenovo-desktop-v530-amd-tower-hero.png?context=bWFzdGVyfHJvb3R8MjA0MjA3fGltYWdlL3BuZ3xoYTQvaGQxLzk5MTA5NjMwNzcxNTAucG5nfDQ0ZGRjZmY0MTQyM2RlNGFjMGFjMzU0MDgxMmYyN2U3OGMwZWM2NDVkMTQ1ZjY1ZmQ1N2Y2OGFmYzE0MGZjOWE"
+            alt="Lenovo V55t"
+            class="img1"
+          />
+          <h3>Lenovo V55t</h3>
+          <ul>
+            <li>Engineered for efficiency</li>
+            <li>Safe & secure</li>
+          </ul>
+          <lable>Price : 24990₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+      </div>
+
+      <div id="tablet">
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/lenovo-tablet-ideapad-duet-chromebook-hero.png?context=bWFzdGVyfHJvb3R8MjUwNDQzfGltYWdlL3BuZ3xoMzgvaDJmLzEwODE5NTQyMTIyNTI2LnBuZ3w5MmQ3NGRhN2ZmMGFhODEyZDFkMDQ0MTE2N2JlMzYzMDdlZjNmZjk2ZjdhZTI3NWVlNTI5ZTcwZWQ3ZDZkNTQ5"
+            alt="Lenovo Crome Tab"
+            class="img1"
+          />
+          <h3>Lenovo Chrome Tablet</h3>
+          <ul>
+            <li>Pure Androide</li>
+            <li>Easy to use</li>
+          </ul>
+          <lable>Price : 26000₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/lenovo-tablet-yoga-smart-tab-series-thumbnail.png?context=bWFzdGVyfHJvb3R8MjU5MDF8aW1hZ2UvcG5nfGhkOS9oOGEvMTA1NjIwNzE5NTM0MzgucG5nfDI1ZWVjMGRlZWE1MWM4ZjVlYmU3OTlmMWRiZDdkMTJiYzkwZGNhYjY2ZjY5OWMzM2QyNmJjZDgyYzdlNTQ3ODQ"
+            alt="Lenovo Yoga Tab"
+            class="img1"
+          />
+          <h3>Lenovo Yoga Tablet</h3>
+          <ul>
+            <li>All in one tablet</li>
+            <li>primium Features</li>
+          </ul>
+          <lable>Price : 20999₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/lenovo-smart-tab-m10-fhd-plus-gen2-series-hero.png?context=bWFzdGVyfHJvb3R8MTIyMTY3fGltYWdlL3BuZ3xoYmEvaDRjLzEwNjY2MTY3Njk3NDM4LnBuZ3xmZWIwYWJlNzM1YTMyNjk3NTYxMzMwM2RjZTZmNDExZjVhNjZhNjdkYTEzMDEzMzliYWYyMGVlZjc1YTE4NmFh"
+            alt="Levnovo TAb M10"
+            class="img1"
+          />
+          <h3>Lenovo M10 Tablet</h3>
+          <ul>
+            <li>Special for kids</li>
+            <li>10.5 inch display</li>
+          </ul>
+          <lable>Price : 20999₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/lenovo-tab-p11-pro-subseries-gallery-10.png?context=bWFzdGVyfHJvb3R8MzU3NzM0fGltYWdlL3BuZ3xoMzEvaGM4LzExMTAxMzQ5NTc2NzM0LnBuZ3xmZjJhYWM3YTU5NDU0OTJmODE0ZGI4OTNkNzhmMDQ4MzA3M2Y5MmI5M2YzZGRkOGNjNWY5NDRlZjJkMDE1NjA3"
+            alt="Lenovo P11 Tablet"
+            class="img1"
+          />
+          <h3>Lenovo P11 Tablet</h3>
+          <ul>
+            <li>Most Powerfull Tablet</li>
+            <li>2K Display</li>
+          </ul>
+          <lable>Price : 44999₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/lenovo-tab-m8-hd-front.png?context=bWFzdGVyfHJvb3R8ODAxMDJ8aW1hZ2UvcG5nfGgxMC9oM2YvMTA1ODgxNTI1NjE2OTQucG5nfDkyYTZmOTdiMmNhNjdiMzVjN2ZkYWM4Y2NjZjJiMGI4ZWJlYzkzYThhMGQ3Mzk1MzAzMDc2M2E5YWIxMDMwNTI"
+            alt="Lenovo M8 Tablet"
+            class="img1"
+          />
+          <h3>Lenovo M8 Tablet</h3>
+          <ul>
+            <li>Sleek Design</li>
+            <li>Long-Lasting Display</li>
+          </ul>
+          <lable>Price : 9999₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+        <div class="class1">
+          <img
+            src="https://www.lenovo.com/medias/lenovo-tablet-lenovo-tab-k10-series.png?context=bWFzdGVyfHJvb3R8Mjk4MjE4fGltYWdlL3BuZ3xoYjIvaDE1LzExOTg0OTg2Mjc1ODcwLnBuZ3w4NzQxMGNmODFkMWIzNWEzY2UwMzI2ZTdmZTA2ZGM3NWJmYzM1ZGJlM2U3YjdmNTNkOTcxYTZlOTJhMWIzNzQx"
+            alt="Lenovo K10 Tablet"
+            class="img1"
+          />
+          <h3>Lenovo K10 Tablet</h3>
+          <ul>
+            <li>All day Battery Life</li>
+            <li>10.5 inch display</li>
+          </ul>
+          <lable>Price : 16999₹</lable>
+          <button class="btn">Buy</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
